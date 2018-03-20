@@ -1,0 +1,478 @@
+html, body {
+}
+
+.scheduler {
+    font-size: 11pt;
+
+    background-color: rgb(236, 237, 240);
+
+    position: relative;
+
+    display: table;
+    margin: 5%;
+    min-width: 90%;
+
+    /*margin: 20px 50px;*/
+
+    /*overflow: auto;*/
+}
+
+.scheduler table {
+    border-collapse: collapse;
+}
+
+.scheduler .content > * {
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+/* SCHEDULER SCROLLER */
+.scheduler .scroller {
+    position: relative;
+
+    height: 370px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* SERVICE COLUMN */
+.scheduler .serviceColumn {
+    margin: 0% 0.5%;
+
+    position: relative;
+
+    display: inline-block;
+    vertical-align: top;
+    /*overflow: hidden;*/
+
+    /*border-radius: 5px;*/
+
+    background-color: #ffffff;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+}
+
+.scheduler .serviceColumn.top {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.scheduler .serviceColumn.bottom {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.scheduler .serviceColumn.disabled .timeTable > tbody > tr {
+    opacity: 0.6;
+    background-image: url('../images/c-grid.png');
+}
+
+/* SERVICE HEADER */
+.scheduler .serviceHeader {
+    padding-top: 10px;
+}
+
+.scheduler .serviceHeader .serviceTitle {
+    text-align: center;
+    color: #e58c8c;
+    font-size: 10pt;
+}
+
+/* SERVICES TABLE */
+.scheduler .serviceMasters {
+    margin-top: 10px;
+}
+
+.scheduler .serviceMasters .schedules_employee_photo {
+    width: auto;
+    margin-bottom: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 12px;
+}
+.scheduler .serviceMasters tbody td:first-child .schedules_employee_photo {
+    /*margin-left: 1px;*/
+}
+
+/* TIME-TABLE */
+.scheduler .timeTable {
+    margin: 10px 0px 0px 0px;
+
+    border: 0px none;
+
+    cursor: default;
+
+    border-radius: 0px 0px 5px 5px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.scheduler * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.scheduler .timeTable > tbody > tr:nth-child(6n+1) > td {
+    border-top: 2px solid #CCCCCC;
+}
+
+.scheduler .serviceMasters td {
+    border: 1px solid white;
+}
+
+.scheduler .serviceMasters td:first-child {
+    border-left: 0 none;
+}
+
+.scheduler .serviceMasters td:last-child {
+    border-right: 0 none;
+}
+
+.scheduler .timeTable td {
+    /*position: relative;*/
+
+    padding: 0;
+
+    /*width: 36px;*/
+    height: 12px;
+
+    border: 1px solid #ECEDF0;
+
+    vertical-align: top;
+
+    /*z-index: 80;*/
+}
+
+.scheduler .timeTable td:first-child {
+    /*width: 35px;*/
+
+    border-left: 0 none;
+}
+
+.scheduler .timeTable td:last-child {
+    border-right: 0 none;
+}
+
+.scheduler .timeTable td:only-child {
+    border-left: 0px none;
+    border-right: 0px none;
+}
+
+.scheduler .timeTable > tbody td.disabled {
+    color: #aaa;
+}
+
+/* APPOINTMENT */
+.scheduler .appointment {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /*width: 100%;*/
+    /*width: 35px;*/
+
+    border-radius: 0px 0px 20px 20px;
+
+    background-color: rgba(90, 90, 90, 0.4);
+    cursor: pointer;
+
+    z-index: 900;
+}
+
+.scheduler .appointment:active,
+.scheduler .appointment.active,
+.scheduler .appointment.active_serv {
+    background-color: rgba(229, 140, 140, 0.8);
+}
+
+.scheduler .appointment.active.paid,
+.scheduler .appointment.paid.active_serv
+{
+
+    background-color: black;
+    background-image: url('../images/diagonal_colored.png');
+}
+
+.scheduler .appointment.paid {
+    background-color: black;
+    background-image: url('../images/diagonal_grey.png');
+}
+
+.scheduler .appointment:active {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.scheduler .serviceColumn .serviceHighlightBlock,
+.scheduler .serviceColumn .serviceHighlightStick {
+    /*width: 36px;*/
+    min-height: 12px;
+
+    display: none;
+
+    /*border: 1px solid rgba(0,0,0,0.15);*/
+    background-color: rgba(247, 65, 75, 0.5);
+
+    pointer-events: none;
+
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.05);
+}
+.scheduler .serviceColumn .serviceHighlightBlock {
+
+    display: block;
+
+    pointer-events: auto;
+}
+
+.scheduler .serviceColumn .serviceHighlightBlock.disabled {
+    background-color: rgba(90, 90, 90, 0.8);
+}
+
+.scheduler .serviceColumn .serviceHighlightStick {
+    background-color: rgba(247, 65, 75, 0.85);
+}
+
+    /* TIME-LINE */
+.scheduler .columnTimeSpacing,
+.scheduler .timeLine {
+    width: 4%;
+
+    text-align: left;
+}
+
+.scheduler .timeLine:last-child {
+    text-align: right;
+}
+
+.scheduler .timeLine .timestamp {
+    position: relative;
+    top: -2px;
+
+    height: 36px;
+
+    color: #555555;
+}
+
+.timestamp_half {
+    font-size: 8pt;
+}
+
+.scheduler .timeLine .timestamp > div {
+    display: inline-block;
+}
+
+.scheduler .timeLine .timestamp .minute {
+    font-size: 0.8181818182em;
+    vertical-align: super;
+    color: #C0C0C0;
+}
+
+/* CURRENT TIME LINE */
+.scheduler .currentTimeLine {
+    position: absolute;
+    left: 0px;
+    top: 25%;
+
+    width: 100%;
+    /*width: 100%;*/
+    line-height: normal;
+
+    /*font-size: 0.7272727273em;*/
+    font-size: 0.6363636364em;
+    pointer-events: none;
+}
+
+.scheduler .currentTimeLine:before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 100%;
+
+    border-bottom: 1px solid #000000;
+
+    z-index: 980;
+}
+
+.scheduler .currentTimeLine > div {
+    position: relative;
+
+    display: table;
+
+    color: #ffffff;
+
+    background-color: #000000;
+
+    z-index: 990;
+}
+
+/* time */
+.scheduler .currentTimeLine > div:first-child {
+    padding: 1px 2px 1px 4px;
+
+    float: left;
+
+    border-radius: 4px 1px 1px 4px;
+}
+
+.scheduler .currentTimeLine > div:last-child {
+    padding: 1px 4px 1px 2px;
+
+    float: right;
+
+    border-radius: 1px 4px 4px 1px;
+}
+
+.scheduler .currentTimeLine > div:first-child:after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: -14px;
+
+    width: 0px;
+    height: 0px;
+
+    border: 7px solid transparent;
+    border-left: 7px solid #000000;
+}
+
+.scheduler .currentTimeLine > div:last-child:after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -14px;
+
+    width: 0px;
+    height: 0px;
+
+    border: 7px solid transparent;
+    border-right: 7px solid #000000;
+}
+
+.datepicker table > tbody > tr > td.day {
+    /*border: 1px solid transparent;*/
+    /*box-sizing: border-box;*/
+}
+
+.datepicker table > tbody > tr > td.day.active {
+    color: #333;
+    background: white;
+    /*border: 1px solid white !important;*/
+}
+
+.datepicker table > tbody > tr > td.day.today {
+    color: white;
+    background: #e58c8c;
+}
+
+.datepicker table > tbody > tr > td.day.active:hover,
+.datepicker table > tbody > tr > td.day.today:hover {
+    background-color: #abb4be;
+}
+
+.scheduler .appointment:hover,
+.scheduler .appointment.hover {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);*/
+}
+
+@media (min-height: 400px) {
+    .scheduler .scroller {
+        height: 300px;
+    }
+}
+
+@media (min-height: 650px) {
+    .scheduler .scroller {
+        height: 370px;
+    }
+}
+
+@media (min-height: 740px) {
+    .scheduler .scroller {
+        height: 470px;
+    }
+}
+
+@media (min-height: 850px) {
+    .scheduler .scroller {
+        height: 570px;
+    }
+}
+
+@media (min-height: 1050px) {
+    .scheduler .scroller {
+        height: 670px;
+    }
+}
+
+/*
+#0072BB
+#8FC93A
+#E4CC37
+#E18335
+#1C2321
+#393424
+#531253
+#CA054D
+#A4D4B4
+#E9DF00
+*/
+.app-hightlight-color01,
+.app-hightlight-color02,
+.app-hightlight-color03,
+.app-hightlight-color04,
+.app-hightlight-color05,
+.app-hightlight-color06,
+.app-hightlight-color07,
+.app-hightlight-color08,
+.app-hightlight-color09,
+.app-hightlight-color10 {
+    border: 2px solid #0072BB;
+}
+.app-hightlight-color02 {
+    border-color: #8FC93A;
+}
+.app-hightlight-color03 {
+    border-color: #E18335;
+}
+.app-hightlight-color04 {
+    border-color: #E4CC37;
+}
+.app-hightlight-color05 {
+    border-color: #1C2321;
+}
+.app-hightlight-color06 {
+    border-color: #393424;
+}
+.app-hightlight-color07 {
+    border-color: #531253;
+}
+.app-hightlight-color08 {
+    border-color: #CA054D;
+}
+.app-hightlight-color09 {
+    border-color: #A4D4B4;
+}
+.app-hightlight-color10 {
+    border-color: #E9DF00;
+}
+
+
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/new-loader.gif') no-repeat center center;
+}

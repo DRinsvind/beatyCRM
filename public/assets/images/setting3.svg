@@ -1,0 +1,152 @@
+<div className="content-with-menu-container">
+	<menu id="content-menu" className="inner-menu" role="menu">
+		<div className="nano">
+			<div className="nano-content">
+				<div className="inner-menu-content">
+					<div className="sidebar-widget m-none">
+						<div className="widget-header">
+							<h6 className="title">
+								Общие настройки
+							</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</menu>
+	<div className="inner-body mg-main">
+		<div className="row">
+			<div className="col-md-12">
+				<h2>TEST</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	[
+		{
+			children:[],
+			id:1001,
+			item:{
+				good_group_id:1001,
+				good_group_name:"Общие",
+				is_root:true,
+				subgroup:[
+					{
+						good_group_id:10011,
+						good_group_name:"Размещение и валюта",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10012,
+						good_group_name:"Время работы",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10013,
+						good_group_name:"Направление",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10014,
+						good_group_name:"Отправка СМС",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10015,
+						good_group_name:"Отправка E-mail",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10016,
+						good_group_name:"Безопасность",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10017,
+						good_group_name:"Резервное копирование",
+						is_root:false,
+						subgroup:[]
+					},
+				]
+			},
+			state:{
+				disabled:false,
+				opened:true,
+				selected:false
+			},
+			text:'Общие'
+		},
+		{
+			children:[],
+			id:1001,
+			item:{
+				good_group_id:1002,
+				good_group_name:"Клиенты",
+				is_root:true,
+				subgroup:[
+					{
+						good_group_id:10021,
+						good_group_name:"Поздровление с ДР",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10022,
+						good_group_name:"Напоминание о записи",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10023,
+						good_group_name:"Акция "Приведи друга",
+						is_root:false,
+						subgroup:[]
+					},
+					{
+						good_group_id:10024,
+						good_group_name:"Запись клиента через сайт",
+						is_root:false,
+						subgroup:[]
+					},
+				]
+				
+			},
+			state:{
+				disabled:false,
+				opened:true,
+				selected:false
+			},
+			text:'Клиенты'
+		},
+		{
+		children:[],
+			id:1003,
+			item:{
+				good_group_id:1003,
+				good_group_name:"Опросы",
+				is_root:true,
+				subgroup:[
+					{
+						good_group_id:10031,
+						good_group_name:"Основная анкета",
+						is_root:false,
+						subgroup:[]
+					},
+				]
+			},
+			state:{
+				disabled:false,
+				opened:true,
+				selected:false
+			},
+			text:'Опросы'
+		}
+	]
+</script>

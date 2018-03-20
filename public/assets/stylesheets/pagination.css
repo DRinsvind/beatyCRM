@@ -1,0 +1,39 @@
+.pagination .btn-primary.prev {
+    border-radius: 4px 0 0 4px;
+}
+
+.pagination .btn-primary.next {
+    border-radius: 0 4px 4px 0;
+}
+
+.pagination .btn-default {
+    border-radius: 0;
+    border-color: #e58c8c;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 5px 12px;
+    color: #e58c8c;
+}
+
+.pagination .btn-default:focus,
+.pagination .btn-active {
+    background-color: #e58c8c;
+    color: white;
+}
+
+.pagination .btn-primary.prev[disabled],
+.pagination .btn-primary.next[disabled] {
+    border-color: #edabab !important;
+    background-color: #edabab !important;
+}
+
+.pagination .btn-default[disabled]:hover {
+    border-color: #edabab !important;
+    color: #edabab !important;
+}
+
+.pagination .btn-default.btn-active[disabled]:hover {
+    background-color: #edabab !important;
+    color: white !important;
+}
+

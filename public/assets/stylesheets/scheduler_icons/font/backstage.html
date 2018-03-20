@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>@font-face Demo</title>
+	<link rel="stylesheet" href="fonts.css" type="text/css" charset="utf-8" />
+	<style type="text/css">
+body {
+	background-color:white;
+	font-family:Verdana,Tahoma,Arial,Sans-Serif;
+	color:black;
+	font-size:18px;
+	padding: 20px 20px 40px 20px;
+	}
+	
+@font-face {
+	font-family: 'Backstage';
+	src: url('backstage.eot');
+	src: local('Backstage'), url('backstage.woff') format('woff'), url('backstage.ttf') format('truetype'), url('backstage.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+
+.bs {
+  display: inline-block;
+  font: normal normal normal 14px/1 Backstage;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 5px;
+}
+.bs-logo:before {content: "\002f";}
+.bs-hairdresser:before {content: "\0034";}
+.bs-manicure:before {content: "\0035";}
+.bs-cosmetology:before {content: "\0036";}
+.bs-makeup:before {content: "\0037";}
+.bs-massage:before {content: "\0038";}
+.bs-sundry:before {content: "\0039";}
+
+</style>
+</head>
+<body>
+
+<i class="bs bs-logo" style="font-size: 40px;"></i>
+
+<br /><br />
+
+<i class="bs bs-hairdresser"></i>
+<i class="bs bs-manicure"></i>
+<i class="bs bs-cosmetology"></i>
+<i class="bs bs-makeup"></i>
+<i class="bs bs-massage"></i>
+<i class="bs bs-sundry"></i>
+
+
+</body>
+</html>

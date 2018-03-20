@@ -1,0 +1,20 @@
+[class^="bs-"], [class*=" bs-"] {
+  font-family: 'Backstage';
+  font-style: normal;
+  font-weight: normal;
+ 
+  /* fix buttons height */
+  line-height: 1em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+
+
+.bs-logo { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x002f;&nbsp;'); }
+.bs-hairdresser { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x0034;&nbsp;'); }
+.bs-manicure { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x0035;&nbsp;'); }
+.bs-cosmetology { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x0036;&nbsp;'); }
+.bs-massage { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x0038;&nbsp;'); }
+.bs-makeup { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x0037;&nbsp;'); }
+.bs-sundry { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x0039;&nbsp;'); }
